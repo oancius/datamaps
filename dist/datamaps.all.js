@@ -12532,10 +12532,10 @@
   Datamap.prototype.addLayer = function( className, id, first ) {
     var layer;
     if ( first ) {
-      layer = this.svg.insert('g', ':first-child')
+      layer = d3.select('.datamap').insert('g', ':first-child')
     }
     else {
-      layer = this.svg.append('g')
+      layer = d3.select('.datamap').append('g')
     }
     return layer.attr('id', id || '')
       .attr('class', className || '');
