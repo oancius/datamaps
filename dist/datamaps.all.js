@@ -141,7 +141,7 @@
         .translate([width / 2, height / 2]);
     }
     else if ( options.scope === 'world' ) {
-      projection = d3.geo[options.projection]()
+      projection = d3.geoEquirectangular()
         .scale((width + 1) / 2 / Math.PI)
         .translate([width / 2, height / (options.projection === "mercator" ? 1.45 : 1.8)]);
     }
