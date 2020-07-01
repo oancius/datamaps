@@ -9,7 +9,7 @@
     responsive: false,
     aspectRatio: 0.5625,
     setProjection: setProjection,
-    projection: 'equirectangular',
+    projection: 'Equirectangular',
     dataType: 'json',
     data: {},
     done: function() {},
