@@ -163,8 +163,7 @@
       projection.scale(250).clipAngle(90).rotate(options.projectionConfig.rotation)
     }
 
-    path = d3.geo.path()
-      .projection( projection );
+    path = d3.geoPath( projection );
 
     return {path: path, projection: projection};
   }
@@ -355,8 +354,7 @@
 
     var arcs = layer.selectAll('path.datamaps-arc').data( data, JSON.stringify );
 
-    var path = d3.geo.path()
-        .projection(self.projection);
+    var path = d3.geoPath(self.projection);
 
     arcs
       .enter()
