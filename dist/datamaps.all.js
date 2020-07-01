@@ -180,7 +180,7 @@
         colorCodeData = this.options.data || {},
         geoConfig = this.options.geographyConfig;
 
-    var subunits = this.svg.select('g.datamaps-subunits');
+    var subunits = d3.select('g.datamaps-subunits');
     if ( subunits.empty() ) {
       subunits = this.addLayer('datamaps-subunits', null, true);
     }
